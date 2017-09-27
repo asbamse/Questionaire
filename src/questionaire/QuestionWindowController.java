@@ -91,5 +91,9 @@ public class QuestionWindowController implements Initializable {
         lblScore.setText(String.valueOf(score));
                 
     }
+
+    @FXML
+    private void handleSave(ActionEvent event) {
+    }
     
 }
