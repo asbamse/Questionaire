@@ -115,5 +115,6 @@
          </font>
       </Label>
       <Button fx:id="btnCalc" layoutX="14.0" layoutY="406.0" mnemonicParsing="false" onAction="#HandleScore" text="Calculate score" />
+      <Button layoutX="366.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleSave" text="Save Score" />
    </children>
 </AnchorPane>

@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -29,6 +30,10 @@ public class MainWindowController implements Initializable {
     private Button button;
     @FXML
     private TextField txtNameField;
+    @FXML
+    private TableColumn<?, ?> tableName;
+    @FXML
+    private TableColumn<?, ?> tableScore;
     
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
