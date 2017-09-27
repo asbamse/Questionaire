@@ -39,8 +39,8 @@ public class MainWindowController implements Initializable {
             getClass().getResource("QuestionWindow.fxml"));
         Parent root = fxLoader.load();
         
-        //NewWindowController cont = fxLoader.getController();
-        //cont.changeName(txtName.getText());
+        QuestionWindowController cont = fxLoader.getController();
+        cont.changeName(txtNameField.getText());
         
         
         Scene scene = new Scene(root);
@@ -51,6 +51,7 @@ public class MainWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
+
     
 }
