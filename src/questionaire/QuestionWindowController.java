@@ -8,6 +8,7 @@ package questionaire;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -47,6 +49,8 @@ public class QuestionWindowController implements Initializable {
     private Button btnCalc;
     @FXML
     private ArrayList<ToggleGroup> grpList;
+    
+    private MainWindowController mvc;
     
     /**
      * Initializes the controller class.
@@ -94,6 +98,12 @@ public class QuestionWindowController implements Initializable {
 
     @FXML
     private void handleSave(ActionEvent event) {
+        mvc.addToList(lblName.getText(), lblScore.getText());
+        Stage stage = (Stage) lblName.getScene().getWindow();
+        stage.close();
     }
     
+    public void setMvc(MainWindowController m){
+        mvc = m;
+    }
 }
