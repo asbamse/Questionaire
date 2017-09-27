@@ -2,16 +2,17 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane layoutX="157.0" layoutY="69.0" prefHeight="329.0" prefWidth="600.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+      <GridPane layoutX="15.0" layoutY="69.0" prefHeight="329.0" prefWidth="568.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="69.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -35,6 +36,62 @@
             <Label text="I always do my assignments" GridPane.rowIndex="5" />
             <Label text="I understand what is going on in class" GridPane.rowIndex="6" />
             <Label text="I think programming is fun" GridPane.rowIndex="7" />
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp0" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp0" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp1" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp2" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp3" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp4" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp5" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp6" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Disagree" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grp7" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp4" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp6" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Neutral" textAlignment="CENTER" toggleGroup="$grp7" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp4" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp5" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp6" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <RadioButton mnemonicParsing="false" text="Agree" toggleGroup="$grp7" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
          </children>
       </GridPane>
       <Label layoutX="14.0" layoutY="14.0" text="Participant:">
@@ -57,6 +114,6 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btnScore" layoutX="14.0" layoutY="406.0" mnemonicParsing="false" text="Calculate score" />
+      <Button fx:id="btnCalc" layoutX="14.0" layoutY="406.0" mnemonicParsing="false" text="Calculate score" />
    </children>
 </AnchorPane>
