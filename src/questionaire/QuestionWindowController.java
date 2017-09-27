@@ -7,10 +7,12 @@ package questionaire;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
 /**
@@ -54,6 +56,28 @@ public class QuestionWindowController implements Initializable {
     public void changeName(String name)
     {
         lblName.setText(name);
+    }
+
+    @FXML
+    private void HandleScore(ActionEvent event) 
+    {
+        RadioButton rb = (RadioButton)grp0.getSelectedToggle();
+        switch(rb.getText())
+        {
+            case "Agree":
+                lblScore.setText("1");
+                break;
+            case "Neutral":
+                lblScore.setText("0");
+                break;
+            case "Disagree":
+                lblScore.setText("-1");
+                break;
+            default:
+                lblScore.setText("Error");
+                break;
+        }
+                
     }
     
 }

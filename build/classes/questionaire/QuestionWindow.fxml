@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="questionaire.QuestionWindowController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="questionaire.QuestionWindowController">
    <children>
       <GridPane layoutX="15.0" layoutY="69.0" prefHeight="329.0" prefWidth="568.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="69.0">
         <columnConstraints>
@@ -114,6 +114,6 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btnCalc" layoutX="14.0" layoutY="406.0" mnemonicParsing="false" text="Calculate score" />
+      <Button fx:id="btnCalc" layoutX="14.0" layoutY="406.0" mnemonicParsing="false" onAction="#HandleScore" text="Calculate score" />
    </children>
 </AnchorPane>
