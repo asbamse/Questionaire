@@ -6,6 +6,7 @@
 package questionaire;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,15 +39,15 @@ public class QuestionWindowController implements Initializable {
     private ToggleGroup grp6;
     @FXML
     private ToggleGroup grp7;
-    
-    private ToggleGroup[] toggleGroup = {grp0, grp1, grp2, grp3, grp4, grp5, grp6, grp7};
     @FXML
     private Label lblName;
     @FXML
     private Label lblScore;
     @FXML
     private Button btnCalc;
-
+    @FXML
+    private ArrayList<ToggleGroup> grpList;
+    
     /**
      * Initializes the controller class.
      */
@@ -64,9 +65,15 @@ public class QuestionWindowController implements Initializable {
     private void HandleScore(ActionEvent event) 
     {
         int score = 0;
-        for (int i = 0; i < toggleGroup.length; i++) 
-        {    
-            RadioButton rb = (RadioButton)toggleGroup[i].getSelectedToggle();
+        for (int i = 0; i < grpList.size(); i++) {
+            ToggleGroup tg = grpList.get(i);
+            
+            if(tg.getSelectedToggle() == null)
+            {
+                continue;
+            }
+            
+            RadioButton rb = (RadioButton)tg.getSelectedToggle();
             switch(rb.getText())
             {
                 case "Agree":

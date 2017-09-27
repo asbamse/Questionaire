@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import java.util.ArrayList?>
 
 <AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="questionaire.QuestionWindowController">
    <children>
@@ -116,4 +117,16 @@
       </Label>
       <Button fx:id="btnCalc" layoutX="14.0" layoutY="406.0" mnemonicParsing="false" onAction="#HandleScore" text="Calculate score" />
    </children>
+   <fx:define>
+        <ArrayList fx:id="grpList" >
+            <fx:reference source="grp0"/>
+            <fx:reference source="grp1"/>
+            <fx:reference source="grp2"/>
+            <fx:reference source="grp3"/>
+            <fx:reference source="grp4"/>
+            <fx:reference source="grp5"/>
+            <fx:reference source="grp6"/>
+            <fx:reference source="grp7"/>
+        </ArrayList>
+    </fx:define>
 </AnchorPane>
