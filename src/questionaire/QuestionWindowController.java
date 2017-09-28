@@ -8,7 +8,6 @@ package questionaire;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -60,11 +59,19 @@ public class QuestionWindowController implements Initializable {
         // TODO
     }
     
+    /**
+     * Change the text of lblName to the parameter.
+     * @param name New text
+     */
     public void changeName(String name)
     {
         lblName.setText(name);
     }
-
+    
+    /**
+     * Generates a sum of all ToggleGroups selected value and sets the lblScore to the result.
+     * @param event
+     */
     @FXML
     private void HandleScore(ActionEvent event) 
     {
@@ -96,6 +103,11 @@ public class QuestionWindowController implements Initializable {
                 
     }
 
+    /**
+     * Adds the new participant and score to the list in the main window.
+     * Closes the QuestionaireWindow.
+     * @param event
+     */
     @FXML
     private void handleSave(ActionEvent event) {
         mvc.addToList(lblName.getText(), lblScore.getText());
@@ -103,6 +115,10 @@ public class QuestionWindowController implements Initializable {
         stage.close();
     }
     
+    /**
+     * Sets the MainWindowController.
+     * @param m The MainWindowController which generated the window.
+     */
     public void setMvc(MainWindowController m){
         mvc = m;
     }

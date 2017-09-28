@@ -18,7 +18,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -38,6 +37,18 @@ public class MainWindowController implements Initializable {
     
     private ObservableList<String> participants = FXCollections.observableArrayList();
     
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        
+        listP.setItems(participants);
+    }
+    
+    /**
+     * Opens a QuestionaireWindow and sets the participant label to the given name.
+     * The MainWindowController is passed so that the addToList method is accessible.
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         
@@ -57,12 +68,11 @@ public class MainWindowController implements Initializable {
         newStage.showAndWait();
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
-        listP.setItems(participants);
-    }
-    
+    /**
+     * Adds new participant and score. If the participant already exists it is overwritten.
+     * @param str Name of participant.
+     * @param score Score.
+     */
     public void addToList(String str, String score)
     {
         for (String participant : participants) {
