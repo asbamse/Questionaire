@@ -7,6 +7,7 @@ package questionaire;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -35,17 +36,28 @@ public class MainWindowController implements Initializable {
     @FXML
     private ListView<String> listP;
     
+    private ArrayList<String> questions = new ArrayList();
     private ObservableList<String> participants = FXCollections.observableArrayList();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        //questions.add("I think programming is fun");
+        questions.add("I like to program in Greenfoot");
+        questions.add("I think Java is fun");
+        questions.add("Java is my preferred language");
+        questions.add("My assignments are fun");
+        questions.add("My assignments are too easy");
+        questions.add("I always do my assignments");
+        questions.add("I always attend class");
+        questions.add("I understand what is going on in class");
+        questions.add("I think programming is fun");
         listP.setItems(participants);
     }
     
     /**
      * Opens a QuestionaireWindow and sets the participant label to the given name.
      * The MainWindowController is passed so that the addToList method is accessible.
+     * Add the questions.
      * @param event
      * @throws IOException 
      */
@@ -61,7 +73,7 @@ public class MainWindowController implements Initializable {
         QuestionWindowController cont = fxLoader.getController();
         cont.changeName(txtNameField.getText());
         cont.setMvc(this);
-        
+        cont.setQuestions(questions);
         
         Scene scene = new Scene(root);
         newStage.setScene(scene);
