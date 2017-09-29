@@ -37,6 +37,11 @@ public class GraphWindowController implements Initializable {
         //TO-DO
     }    
     
+    /**
+     * Gets particiants average score for each question and add it to the graph.
+     * @param questions ArrayList of questions
+     * @param results ArrayList of Results
+     */
     public void addData(ArrayList<String> questions, ArrayList<Result> results)
     {
         //Chart container
