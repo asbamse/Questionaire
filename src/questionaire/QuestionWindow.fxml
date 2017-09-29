@@ -47,16 +47,6 @@
                     <rowConstraints>
                       <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                     </rowConstraints>
-                     <children>
-                        <Label fx:id="lbl0" text="I like to program in Greenfoot" />
-                        <RadioButton mnemonicParsing="false" onAction="#HandleScore" text="Disagree" GridPane.columnIndex="1" GridPane.halignment="LEFT">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="grp0" />
-                           </toggleGroup>
-                        </RadioButton>
-                        <RadioButton contentDisplay="CENTER" mnemonicParsing="false" onAction="#HandleScore" text="Neutral" textAlignment="CENTER" toggleGroup="$grp0" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                        <RadioButton mnemonicParsing="false" onAction="#HandleScore" text="Agree" toggleGroup="$grp0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
-                     </children>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -73,10 +63,8 @@
    </children>
    <fx:define>
         <ArrayList fx:id="grpList">
-            <fx:reference source="grp0" />
         </ArrayList>
         <ArrayList fx:id="lblList">
-            <fx:reference source="lbl0" />
         </ArrayList>
     </fx:define>
 </AnchorPane>
