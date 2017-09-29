@@ -13,5 +13,6 @@
       <Label layoutX="23.0" layoutY="35.0" text="Name" />
       <ListView fx:id="listP" layoutX="141.0" layoutY="29.0" prefHeight="160.0" prefWidth="165.0" />
       <Label layoutX="146.0" layoutY="6.0" text="Participants" />
+      <Button layoutX="34.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleGraph" text="Open Graph" />
     </children>
 </AnchorPane>

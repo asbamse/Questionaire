@@ -169,4 +169,24 @@ public class MainWindowController implements Initializable
             }
         }
     }
+
+    @FXML
+    private void handleGraph(ActionEvent event) throws IOException 
+    {
+        //Initialize Stage
+        Stage newStage = new Stage();
+        newStage.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxLoader = new FXMLLoader(
+        getClass().getResource("GraphWindow.fxml"));
+        Parent root = fxLoader.load();
+       
+        //Get controller and setup content.
+        GraphWindowController cont = fxLoader.getController();
+        cont.addData(questions, results);
+        
+        //Show it
+        Scene scene = new Scene(root);
+        newStage.setScene(scene);
+        newStage.showAndWait();
+    }
 }
